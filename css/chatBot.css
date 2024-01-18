@@ -1,0 +1,193 @@
+.chat-screen {
+  position: fixed;
+  bottom: 68px;
+  right: 20px;
+  z-index: 9999;
+  width: 350px;
+  background: #f7f4f4;
+  box-sizing: border-box;
+  border-radius: 15px;
+  visibility: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.chat-screen.show-chat {
+  -moz-transition: bottom 0.5s linear;
+  -webkit-transition: bottom 0.5s linear;
+  transition: bottom 0.5s linear;
+  visibility: visible;
+  bottom: 82px;
+}
+.chat-screen .chat-header {
+  background-image: linear-gradient(
+    to right,
+    #ea2e39,
+    #e3323c,
+    #dc3640,
+    #d43a42,
+    #cd3d45
+  );
+
+  border-radius: 15px 15px 0 0;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  line-height: 15px;
+  letter-spacing: 2px;
+}
+.chat-screen .chat-header .chat-header-title {
+  display: inline-block;
+  /* width: calc(100% - 50px); */
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat-screen .chat-mail {
+  padding: 15px 20px;
+}
+
+.chat-screen .chat-mail button {
+  background-color: #ea2e39;
+  border: none;
+  padding: 0.8rem;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chat-screen .chat-session-end {
+  display: block;
+  padding: 25px;
+}
+
+.chat-bot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  background-image: linear-gradient(
+    to right,
+    #efa03c,
+    #eb873a,
+    #e46f3c,
+    #da5640,
+    #cd3d45
+  );
+  z-index: 9999;
+  border-radius: 30px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.chat-bot-icon img {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  right: -19px;
+  top: -33px;
+}
+.chat-bot-icon svg {
+  color: #fff;
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: transform 0.5s linear;
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  opacity: 0;
+  z-index: -1;
+}
+.chat-bot-icon svg.animate {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  opacity: 1;
+  z-index: 1;
+}
+.reportRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.reportRow label {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+  font-weight: 600;
+}
+
+.input-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 0.4rem 0;
+  box-sizing: border-box;
+  border: 1px solid #acacac;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+}
+.custom-textArea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid #acacac;
+  border-radius: 4px;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 0.9rem;
+  background-color: #f8f8f8;
+  resize: none;
+  border-radius: 20px;
+  transition: border-color 0.3s;
+  margin: 0.4rem 0;
+}
+
+.custom-input:focus,
+.custom-textArea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.custom-input::placeholder,
+.custom-textArea::placeholder {
+  color: #000;
+  font-style: italic;
+}
+.rate-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.great span {
+  margin-right: 0.5rem;
+}
+.great svg {
+  height: 60px;
+  width: 60px;
+}
+.hide {
+  display: none !important;
+}
+
+#issueReportForm .error {
+  color: red;
+  font-style: italic;
+}
